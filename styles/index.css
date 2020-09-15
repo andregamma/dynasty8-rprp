@@ -7,8 +7,26 @@
 /* Stop purging. */
 
 /* Write you own custom component styles here */
-.btn-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+.btn-green {
+  @apply px-4 py-2 font-bold text-white bg-primary;
+}
+
+.bg-city {
+  position: relative;
+}
+.bg-city::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://images.hdqwalls.com/wallpapers/gta-v-4k-ti.jpg);
+  filter: grayscale(100%);
+}
+.bg-city-inside {
+  /* This will make it stack on top of the ::before */
+  position: relative;
 }
 
 /* Start purging... */
