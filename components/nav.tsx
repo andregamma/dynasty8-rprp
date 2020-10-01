@@ -25,15 +25,26 @@ export default function Nav() {
           className="h-20"
         />
       </div>
-      <div className="p-2 text-lg text-center bg-primary">
-        {isNotIndex ? (
+      {isNotIndex ? (
+        <div className="p-2 text-lg text-center bg-primary">
           <p className="font-semibold text-white">
             A melhor mudança que você fará na vida
           </p>
-        ) : (
-          <p>teste</p>
-        )}
-      </div>
+        </div>
+      ) : (
+        <>
+          <div className="flex justify-center space-x-2">
+            <div className="px-12 py-1 font-semibold bg-yellow-500 text-primary">
+              TODOS
+            </div>
+          </div>
+          <div className="p-2 text-lg text-center bg-primary">
+            <p className="font-semibold text-white">
+              A melhor mudança que você fará na vida
+            </p>
+          </div>
+        </>
+      )}
     </nav>
   );
 }
